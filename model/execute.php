@@ -26,7 +26,7 @@ class Execute
     {
         $result = mysqli_query(
             $this->db,
-            "SELECT lat, lng FROM locations;"
+            "SELECT lat, lng FROM locations limit 0, 20;"
         );
 
         if ($result) {

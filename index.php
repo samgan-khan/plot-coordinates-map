@@ -44,15 +44,25 @@
             center: {lat: 26.9124, lng: 75.7873},
         });
 
-        var track = new google.maps.Polyline({
-            path: coordinates,
+        var trackRaw = new google.maps.Polyline({
+            path: coordinates.raw,
             geodesic: true,
-            strokeColor: '#FF0000',
+            strokeColor: '#ff2c0e',
             strokeOpacity: 1.0,
             strokeWeight: 2
         });
 
-        track.setMap(map);
+        trackRaw.setMap(map);
+
+        var trackSorted = new google.maps.Polyline({
+            path: coordinates.sorted,
+            geodesic: true,
+            strokeColor: '#0a3fff',
+            strokeOpacity: 1.0,
+            strokeWeight: 2
+        });
+
+        trackSorted.setMap(map);
     }
 </script>
 <script async defer
